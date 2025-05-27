@@ -33,6 +33,10 @@ const projectSchema = new Schema<TProject>(
     serial: {
       type: Number,
     },
+    isFeatured: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

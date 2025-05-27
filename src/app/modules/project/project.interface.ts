@@ -8,6 +8,7 @@ export type TProject = {
   serverRepo?: string;
   videoLink?: string;
   serial?: number;
+  isFeatured?: boolean;
   _id?: string;
   __v: number;
   createdAt?: Date;
