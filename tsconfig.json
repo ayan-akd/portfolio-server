@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "target": "ES2016",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // directory
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Some stricter flags
+    "noUnusedLocals": null,
+    "noUnusedParameters": null,
+    "noPropertyAccessFromIndexSignature": null
+  },
+  "include": ["./src"],
+  "exclude": ["./dist"]
+}
