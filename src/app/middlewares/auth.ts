@@ -8,6 +8,13 @@ import { verifyToken } from "../modules/auth/auth.utils";
 const auth = () => {
   return catchAsync(async (req: Request, res: Response, next: NextFunction) => {
     const token = req.headers.authorization;
+    const authorizedEmail = [
+      "ayanakd112@gmail.com",
+      "ayanakd212@gmail.com",
+      "ayanakd312@gmail.com",
+      "ayankumar.akd@gmail.com",
+      "admin@mail.com",
+    ];
 
     // checking if the token is missing
     if (!token) {
@@ -18,13 +25,7 @@ const auth = () => {
     const decoded = verifyToken(token, config.jwt_access_secret as string);
     const { email } = decoded;
 
-    if (
-      email !== "ayanakd112@gmail.com" ||
-      email !== "ayanakd212@gmail.com" ||
-      email !== "ayanakd312@gmail.com" ||
-      email !== "ayankumar.akd@gmail.com" ||
-      email !== "admin@mail.com"
-    ) {
+    if (!authorizedEmail.includes(email)) {
       throw new AppError(httpStatus.UNAUTHORIZED, "You are not authorized");
     }
     next();
