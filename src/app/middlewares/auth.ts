@@ -22,7 +22,7 @@ const auth = () => {
       email !== "ayanakd112@gmail.com" ||
       email !== "ayanakd212@gmail.com" ||
       email !== "ayanakd312@gmail.com" ||
-      email !== "ayanakumar.akd@gmail.com" ||
+      email !== "ayankumar.akd@gmail.com" ||
       email !== "admin@mail.com"
     ) {
       throw new AppError(httpStatus.UNAUTHORIZED, "You are not authorized");
