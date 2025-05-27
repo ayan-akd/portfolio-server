@@ -8,6 +8,6 @@ router.get("/", AboutController.getAllAbout);
 
 router.post("/", AboutController.createAbout);
 
-router.get("/:id", AboutController.updateAbout);
+router.patch("/:id", AboutController.updateAbout);
 
 export const AboutRoutes = router;
