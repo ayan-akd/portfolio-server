@@ -6,5 +6,5 @@ export interface TSkill {
   category: "frontend" | "backend" | "tools" | "database";
   name: string;
   icon: string;
-  proficiency: number;
+  proficiency?: number;
 }

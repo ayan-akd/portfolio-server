@@ -5,7 +5,7 @@ const skillSchema = new Schema<TSkill>(
   {
     name: { type: String, required: true },
     icon: { type: String, required: true },
-    proficiency: { type: Number, required: true },
+    proficiency: { type: Number },
     category: {
       type: String,
       required: true,
